@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background: url('img/p.jpg');
+        background-size: cover;
+    }
+
+    .form {
+        max-width: 500px;
+        padding: 10px 20px;
+        background: #dba270;
+        margin: 10px auto;
+        padding: 20px;
+        border-radius: 12px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .form fieldset {
+        border: none;
+    }
+
+    .form legend {
+        font-size: 1.4em;
+        margin-bottom: 10px;
+    }
+
+    .form input[type="text"],
+    .form input[type="email"],
+    .form input[type="number"],
+    .form textarea,
+    .form select {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background: rgba(255, 255, 255, .1);
+        border: none;
+        border-radius: 4px;
+        font-size: 15px;
+        margin: 0;
+        outline: 0;
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        background-color: #e8eeef;
+        color: #8a97a0;
+        margin-bottom: 30px;
+    }
+
+    .form .number {
+        background: rgb(196, 101, 101);
+        color: #fff;
+        height: 30px;
+        width: 30px;
+        display: inline-block;
+        font-size: 0.8em;
+        margin-right: 4px;
+        line-height: 30px;
+        text-align: center;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+        border-radius: 15px 15px 15px 0px;
+    }
+
+    .form input[type="submit"],
+    .form input[type="button"] {
+        position: relative;
+        display: block;
+        padding: 19px 39px 18px 39px;
+        color: #FFF;
+        margin: 0 auto;
+        background: rgb(196, 101, 101);
+        font-size: 18px;
+        text-align: center;
+        width: 50%;
+        border: 1px solid rgb(196, 101, 101);
+        margin-bottom: 15px;
+        border-radius: 5px;
+    }
+
+
+    .form input[type="submit"]:hover,
+    .form input[type="button"]:hover {
+        background: rgb(155, 43, 43);
+    }
+
+
+    .form-control {
+        margin-bottom: 15px;
+        position: relative;
+    }
+
+
+    .form-control label {
+        display: inline-block;
+        margin-bottom: 5px;
+        padding-top: 0px;
+    }
+
+
+    .form-control input {
+        width: 100%;
+        border-radius: 5px;
+        font-size: 10px;
+        padding: 10px;
+    }
+
+    .form-control.success input {
+        border-color: #2ecc71;
+    }
+
+    .form-control.error input {
+        border-color: #e74c3c;
+    }
+
+
+    .form-control small {
+        color: #e74c3c;
+        position: absolute;
+        margin-top: 30px;
+        left: 0;
+        visibility: hidden;
+
+    }
+
+    .form-control.error small {
+        visibility: visible;
+    }
+
+
+
+    .form-control.success input {
+        border-color: #2ecc71;
+    }
+
+    .form-control.error input {
+        border-color: #e74c3c;
+    }
+
+    .form .form-control small {
+        color: #000000;
+        text-shadow: 2px 2px 2px white;
+        position: relative;
+        margin-bottom: 5px;
+        bottom: -5;
+        top: -35px;
+        visibility: hidden;
+    }
+
+
+
+
+    .form-control.error small {
+        visibility: visible;
+    }
+</style>
+
+<body>
+
+    <form class="form" id="form" action="/index2.php" method="post">
+
+        <div class="form-control">
+            <legend><span class="number">1</span> Owner Info</legend>
+            <input type="text" name="name" id="username" placeholder="Your Name" autocomplete="off">
+            <small>err msg1</small>
+        </div>
+        <div class="form-control">
+            <input type="number" name="contact" id="phone" placeholder="Your Contact">
+            <small>err msg2</small>
+        </div>
+        <div class="form-control">
+            <input type="email" name="email" id="email" placeholder="Your Email">
+            <small>err msg3</small>
+        </div>
+        <div class="form-control">
+            <textarea name="address" id="address" placeholder="Address"></textarea>
+            <small>err msg4</small>
+        </div>
+        <div class="form-control">
+            <legend><span class="number">2</span> Pet Info</legend>
+            <label for="job">Type of pet:</label>
+            <select id="job" name="type">
+                <option value="">Dog</option>
+                <option value="">Cat</option>
+                <option value="">Horses</option>
+                <option value="">Fishes</option>
+                <option value="">Birds</option>
+                <option value="">Small Animals</option>
+                <option value="">Others</option>
+            </select>
+
+            <input type="text" name="pname" id="pname" placeholder="Name">
+            <small>err msg5</small>
+        </div>
+        <div class="form-control">
+            <input type="text" name="pgender" id="gender" placeholder="Gender">
+            <small>err msg6</small>
+        </div>
+        <div class="form-control">
+            <input type="text" name="page" id="age" placeholder="Age">
+            <small>err msg7</small>
+        </div>
+        <div class="form-control">
+            <input type="text" name="pcolor" id="color" placeholder="Color">
+            <small>err msg8</small>
+        </div>
+        <label for="job">Is your pet healthy?</label>
+
+        <select id="job" name="healthy">
+            <option value="">Yes</option>
+            <option value="">No</option>
+        </select>
+
+        <br>
+        <label for="job">About your pet</label>
+        <div class="form-control">
+            <textarea name="txt" placeholder="type here..." rows="4px" id="text"></textarea>
+            <small>err msg9</small>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+
+        const form = document.getElementById('form')
+        const username = document.getElementById('username');
+        const phone = document.getElementById('phone');
+        const email = document.getElementById('email');
+        const address = document.getElementById('address');
+        const pname = document.getElementById('pname');
+        const gender = document.getElementById('gender');
+        const age = document.getElementById('age');
+        const color = document.getElementById('color')
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+
+            validate();
+
+
+        })
+
+        const sendData = (usernameVal, sRate, count) => {
+            if (sRate === count) {
+                alert('registration Successfull');
+                location.href = `login.html?user=${usernameVal}`
+            }
+        }
+
+
+
+        const successMsg = (usernameVal) => {
+            let formCon = document.getElementsByClassName('form-control')
+            var count = formCon.length - 1
+            for (var i = 0; i < formCon.length; i++) {
+                if (formCon[i].className === "form-control success") {
+                    var sRate = 0 + i;
+                    console.log(sRate)
+                    sendData(usernameVal, sRate, count);
+                } else {
+                    return false;
+                }
+            }
+        }
+
+
+        const isEmail = (emailVal) => {
+            var atSymblol = emailVal.indexOf("@");
+            if (atSymblol < 1) return false;
+            var dot = emailVal.lastIndexOf('.');
+            if (dot <= atSymblol + 2) return false;
+            if (dot === emailVal.length - 1) return false;
+            return true;
+        }
+
+
+        const validate = () => {
+            const usernameVal = username.value.trim();
+            const phoneVal = phone.value.trim();
+            const emailVal = email.value.trim();
+            const addressVal = address.value.trim();
+            const pnameVal = pname.value.trim();
+            const genderVal = gender.value.trim();
+            const ageVal = age.value.trim();
+            const colorVal = color.value.trim();
+
+            if (usernameVal === "") {
+                setErrorMsg(username, "username cannot be blank");
+            } else if (usernameVal.length <= 3) {
+                setErrorMsg(username, "username must have min 4 characters");
+            } else {
+                setSuccessMsg(username);
+            }
+
+            if (phoneVal === "") {
+                setErrorMsg(phone, "phone no cannot be blank");
+            } else if (phoneVal.length != 10) {
+                setErrorMsg(phone, "phone no is not valid");
+            } else {
+                setSuccessMsg(phone);
+            }
+
+            if (emailVal === "") {
+                setErrorMsg(email, "email cannot be blank");
+            } else if (!isEmail(emailVal)) {
+                setErrorMsg(email, "not a valid email");
+            } else {
+                setSuccessMsg(email);
+            }
+
+            if (addressVal === "") {
+                setErrorMsg(address, "address cannot be blank");
+            } else {
+                setSuccessMsg(address);
+            }
+
+            if (pnameVal === "") {
+                setErrorMsg(pname, "pname cannot be blank");
+            } else if (pnameVal.length <= 2) {
+                setErrorMsg(pname, "username must have min 2 characters");
+            } else {
+                setSuccessMsg(pname);
+            }
+
+
+            if (genderVal === "") {
+                setErrorMsg(gender, "gender cannot be blank");
+            } else {
+                setSuccessMsg(gender);
+            }
+
+            if (ageVal === "") {
+                setErrorMsg(age, "age cannot be blank");
+            } else {
+                setSuccessMsg(age);
+            }
+
+            if (colorVal === "") {
+                setErrorMsg(color, "color cannot be blank");
+            } else {
+                setSuccessMsg(color);
+            }
+            successMsg(usernameVal);
+
+        }
+        function setErrorMsg(input, errormsgs) {
+            const formControl = input.parentElement;
+            const small = formControl.querySelector("small");
+            formControl.className = "form-control error"
+            small.innerText = errormsgs;
+
+        }
+
+        function setSuccessMsg(input) {
+            const formControl = input.parentElement;
+            formControl.className = "form-control success";
+
+
+
+        }
+    </script>
+</body>
+
+</html>
